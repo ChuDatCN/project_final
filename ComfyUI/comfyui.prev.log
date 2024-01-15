@@ -1,0 +1,81 @@
+** ComfyUI start up time: 2024-01-13 09:19:05.082861
+Failed to execute startup-script: /content/drive/MyDrive/AI/ComfyUI/custom_nodes/ComfyUI-Manager/prestartup_script.py / 'default'
+
+Prestartup times for custom nodes:
+   1.7 seconds (PRESTARTUP FAILED): /content/drive/MyDrive/AI/ComfyUI/custom_nodes/ComfyUI-Manager
+
+Total VRAM 40514 MB, total RAM 85481 MB
+xformers version: 0.0.23.post1
+Set vram state to: NORMAL_VRAM
+Device: cuda:0 NVIDIA A100-SXM4-40GB : cudaMallocAsync
+VAE dtype: torch.bfloat16
+Using xformers cross attention
+Adding extra search path checkpoints path/to/stable-diffusion-webui/models/Stable-diffusion
+Adding extra search path configs path/to/stable-diffusion-webui/models/Stable-diffusion
+Adding extra search path vae path/to/stable-diffusion-webui/models/VAE
+Adding extra search path loras path/to/stable-diffusion-webui/models/Lora
+Adding extra search path loras path/to/stable-diffusion-webui/models/LyCORIS
+Adding extra search path upscale_models path/to/stable-diffusion-webui/models/ESRGAN
+Adding extra search path upscale_models path/to/stable-diffusion-webui/models/RealESRGAN
+Adding extra search path upscale_models path/to/stable-diffusion-webui/models/SwinIR
+Adding extra search path embeddings path/to/stable-diffusion-webui/embeddings
+Adding extra search path hypernetworks path/to/stable-diffusion-webui/models/hypernetworks
+Adding extra search path controlnet path/to/stable-diffusion-webui/models/ControlNet
+### Loading: ComfyUI-Manager (V0.43)
+### ComfyUI Revision: 1667 [3e0033ef] | Released on '2023-11-10'
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/AI/ComfyUI/nodes.py", line 1748, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/content/drive/MyDrive/AI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/__init__.py", line 3, in <module>
+    from .animatediff.model_utils import get_available_motion_models, Folders
+  File "/content/drive/MyDrive/AI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/animatediff/model_utils.py", line 10, in <module>
+    from comfy.model_base import SD21UNCLIP, SDXL, BaseModel, SDXLRefiner, SVD_img2vid, model_sampling
+ImportError: cannot import name 'SVD_img2vid' from 'comfy.model_base' (/content/drive/MyDrive/AI/ComfyUI/comfy/model_base.py)
+
+Cannot import /content/drive/MyDrive/AI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved module for custom nodes: cannot import name 'SVD_img2vid' from 'comfy.model_base' (/content/drive/MyDrive/AI/ComfyUI/comfy/model_base.py)
+### Loading: ComfyUI-Impact-Pack (V4.30.3)
+### Loading: ComfyUI-Impact-Pack (Subpack: V0.4)
+DWPose: Onnxruntime with acceleration providers detected
+Total VRAM 40514 MB, total RAM 85481 MB
+xformers version: 0.0.23.post1
+Set vram state to: NORMAL_VRAM
+Device: cuda:0 NVIDIA A100-SXM4-40GB : cudaMallocAsync
+VAE dtype: torch.bfloat16
+Torch version: 2.1.2+cu121
+Total VRAM 40514 MB, total RAM 85481 MB
+xformers version: 0.0.23.post1
+Set vram state to: NORMAL_VRAM
+Device: cuda:0 NVIDIA A100-SXM4-40GB : cudaMallocAsync
+VAE dtype: torch.bfloat16
+
+Import times for custom nodes:
+   6.1 seconds (IMPORT FAILED): /content/drive/MyDrive/AI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved
+  13.3 seconds: /content/drive/MyDrive/AI/ComfyUI/custom_nodes/ComfyUI-Manager
+  18.5 seconds: /content/drive/MyDrive/AI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+  34.9 seconds: /content/drive/MyDrive/AI/ComfyUI/custom_nodes/comfyui-reactor-node
+  36.1 seconds: /content/drive/MyDrive/AI/ComfyUI/custom_nodes/comfyui_controlnet_aux
+  54.5 seconds: /content/drive/MyDrive/AI/ComfyUI/custom_nodes/facerestore_cf
+
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/AI/ComfyUI/main.py", line 201, in <module>
+    loop.run_until_complete(run(server, address=args.listen, port=args.port, verbose=not args.dont_print_server, call_on_start=call_on_start))
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/AI/ComfyUI/main.py", line 203, in <module>
+    print("\nStopped server")
+  File "/content/drive/MyDrive/AI/ComfyUI/custom_nodes/ComfyUI-Manager/prestartup_script.py", line 101, in write
+    if any(f(message) for f in message_collapses):
+KeyboardInterrupt
