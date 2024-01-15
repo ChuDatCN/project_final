@@ -33,5 +33,9 @@ II) Cài đặt môi trường
 III) Chạy file thực thi chương trình
 - python3 ../ComfyUI/workflow_api.py
 
+IV) Source:
+- github-link: https://github.com/ChuDatCN/project_final 
+- ggdrive + colab: https://drive.google.com/drive/folders/1-04WXDWJZ0AyQ-gSRdkI2_gNetMu_59b?usp=sharing 
+
 
 
